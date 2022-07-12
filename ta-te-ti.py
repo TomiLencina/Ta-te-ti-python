@@ -1,8 +1,11 @@
 from random import randrange
 
-#       Creando el tablero
 
 name_jug = input("Ingresa Tu nombre: ")
+saludo = input("Hola {}, tus movimientos en el tablero se marcaran con la O".format(name_jug))
+run = print("Lets go!!!")
+
+#       Creando el tablero
 
 def display_tablero(board):
 	print("+-------" * 3,"+", sep="")
@@ -92,6 +95,7 @@ while len(free):
 		break
 	turno_jugador = not turno_jugador		
 	free = celdas_free(board)
+
 
 display_tablero(board)
 if victoria == 'you':
